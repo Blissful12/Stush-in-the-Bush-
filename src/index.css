@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+@theme {
+  --color-forest: #1a3a2a;
+  --color-terracotta: #c4633a;
+  --color-cream: #f5f0e8;
+  --color-gold: #c9a84c;
+  --color-charcoal: #2b2b2b;
+  
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --animate-marquee: marquee 30s linear infinite;
+  
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cream text-charcoal font-sans antialiased;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-cream;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-forest/20 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-forest/40;
+}
+
+/* Glass effect */
+.glass {
+  @apply backdrop-blur-md bg-white/10 border border-white/20;
+}
+
+/* Text balance */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Section transitions */
+.wave-divider {
+  @apply relative h-24 w-full overflow-hidden;
+}
+
+.wave-divider svg {
+  @apply absolute bottom-0 w-full h-full;
+}

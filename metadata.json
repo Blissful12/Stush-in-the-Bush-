@@ -1,0 +1,8 @@
+{
+  "name": "Stush in the Bush",
+  "description": "Plant-based paradise where farm-to-table meets Ital consciousness in the hills of Free Hill, St. Ann, Jamaica.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
